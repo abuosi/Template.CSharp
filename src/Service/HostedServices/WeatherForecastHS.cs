@@ -22,7 +22,7 @@ namespace Service.HostedServices
         {
             _logger.LogInformation("CheckWeatherForecastHS Hosted Service running.");
 
-            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(60));
 
             return Task.CompletedTask;
         }
